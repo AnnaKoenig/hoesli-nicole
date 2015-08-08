@@ -1,0 +1,247 @@
+/*
+Theme Name: Nicole Hoesli
+Discription: Child Theme of twentyfourteen
+Template: twentyforteen
+Author: Anna König
+Autor URI: www.annakoenig.berlin
+Version: 1.0
+
+@import url('../twentyfourteen/style.css');
+*/
+@import url('css/bootstrap.min.css');
+@import url('css/grid.css');
+
+/*======================================================================main Styles
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+	margin-top: 40px;
+}
+
+/*====================================================================== DELATED
+*/
+aside#search-2, #recent-comments-2, #archives-2, #categories-2, #meta-2,
+ header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text { 
+	display: none;
+}
+
+/*======================================================================site Navigation 
+*/
+
+.site-title {
+		float: left;
+		font-size: 14pt;
+		margin-left: 20px;
+		margin-top: 15px;
+}
+
+.site-navigation ul {
+	list-style: none;
+	margin: 0;
+}
+
+.site-navigation li {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-navigation ul ul {
+	margin-left: 20px;
+}
+
+.site-navigation a {
+	color: #fff;
+	display: block;
+	text-transform: uppercase;
+}
+
+.site-navigation a:hover {
+	color: #fff;
+}
+
+.site-navigation .current_page_item > a,
+.site-navigation .current_page_ancestor > a,
+.site-navigation .current-menu-item > a,
+.site-navigation .current-menu-ancestor > a {
+	color: #55d737;
+	font-weight: 900;
+}
+
+.primary-navigation {
+		float: right;
+		font-size: 11px;
+		margin: 0 1px 0 -1px;
+		padding: 0;
+		text-transform: uppercase;
+	}
+
+.primary-navigation .menu-toggle {
+		display: none;
+		padding: 0;
+}
+
+.primary-navigation .nav-menu {
+		border-bottom: 0;
+		display: block;
+}
+
+.primary-navigation.toggled-on {
+		border-bottom: 0;
+		margin: 0;
+		padding: 0;
+}
+
+.primary-navigation li {
+		border: 0;
+		display: inline-block;
+		height: 48px;
+		line-height: 48px;
+		position: relative;
+}
+
+.primary-navigation a {
+		display: inline-block;
+		padding: 0 12px;
+		white-space: nowrap;
+}
+
+.primary-navigation ul ul {
+		float: left;
+		margin: 0;
+		position: absolute;
+		top: 48px;
+		left: -999em;
+		z-index: 99999;
+}
+
+.primary-navigation li li {
+		border: 0;
+		display: block;
+		height: auto;
+		line-height: 1.0909090909;
+}
+
+.primary-navigation ul ul ul {
+		left: -999em;
+		top: 0;
+}
+
+.primary-navigation ul ul a {
+		padding: 18px 12px;
+		white-space: normal;
+		width: 176px;
+}
+
+.primary-navigation li:hover > a,
+	.primary-navigation li.focus > a {
+		border-bottom:solid black;
+}
+
+.primary-navigation ul li:hover > ul,
+	.primary-navigation ul li.focus > ul {
+		left: auto;
+}
+
+.primary-navigation ul ul li:hover > ul,
+	.primary-navigation ul ul li.focus > ul {
+		left: 100%;
+}
+
+.primary-navigation .menu-item-has-children > a,
+	.primary-navigation .page_item_has_children > a {
+		padding-right: 26px;
+}
+
+.primary-navigation .menu-item-has-children > a:after,
+	.primary-navigation .page_item_has_children > a:after {
+		-webkit-font-smoothing: antialiased;
+		content: "\f502";
+		display: inline-block;
+		font: normal 8px/1 Genericons;
+		position: absolute;
+		right: 12px;
+		top: 22px;
+		vertical-align: text-bottom;
+}
+
+.primary-navigation li .menu-item-has-children > a,
+	.primary-navigation li .page_item_has_children > a {
+		padding-right: 20px;
+		width: 168px;
+}
+
+.primary-navigation .menu-item-has-children li.menu-item-has-children > a:after,
+	.primary-navigation .menu-item-has-children li.page_item_has_children > a:after,
+	.primary-navigation .page_item_has_children li.menu-item-has-children > a:after,
+	.primary-navigation .page_item_has_children li.page_item_has_children > a:after {
+		content: "\f501";
+		right: 8px;
+		top: 20px;
+}
+
+
+
+
+
+
+/*======================================================================Home-Layout-grid
+*/
+.grid {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
