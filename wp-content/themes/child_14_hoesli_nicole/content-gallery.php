@@ -40,7 +40,7 @@
 			<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-
+	
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */

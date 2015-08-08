@@ -544,45 +544,7 @@ add_action('admin_menu', 'remove_menus');
 
 
 
-function projects_register_attachments_tax() {
-	register_taxonomy( 'gallery-category', 'attachment',
-    array(
-        	'labels' =>  array(
-            'name'              => 'Gallery Categories',
-            'singular_name'     => 'Gallery Category',
-            'search_items'      => 'Search Gallery Categories',
-            'all_items'         => 'All Gallery Categories',
-            'edit_item'         => 'Edit Gallery Categories',
-            'update_item'       => 'Update Gallery Category',
-            'add_new_item'      => 'Add New Gallery Category',
-            'new_item_name'     => 'New Gallery Category Name',
-            'menu_name'         => 'Gallery Category',
-        ),
-	        'hierarchical' => true,
-	        'sort' => true,
-	        'show_admin_column' => true
-    )
-);
-	register_taxonomy( 'document-category', 'attachment',
-    array(
-        'labels' =>  array(
-            'name'              => 'Document Categories',
-            'singular_name'     => 'Document Category',
-            'search_items'      => 'Search Document Categories',
-            'all_items'         => 'All Document Categories',
-            'edit_item'         => 'Edit Document Categories',
-            'update_item'       => 'Update Document Category',
-            'add_new_item'      => 'Add New Document Category',
-            'new_item_name'     => 'New Document Category Name',
-            'menu_name'         => 'Document Category',
-        ),
-	        'hierarchical' => true,
-	        'sort' => true,
-	        'show_admin_column' => true
-    )
-);
- 
-}
+
 add_action( 'init', 'projects_register_attachments_tax', 0 );
 
 function projects_add_categories_to_attachments() {

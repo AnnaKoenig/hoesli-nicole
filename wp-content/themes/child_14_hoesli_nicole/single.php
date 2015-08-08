@@ -8,9 +8,12 @@
  */
 
 get_header(); ?>
-
+<div class="row">
+			        <div class="col-md-1"></div>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
+
+			        <div class="col-md-10">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
@@ -31,6 +34,8 @@ get_header(); ?>
 					}
 				endwhile;
 			?>
+		</div><!-- end col-md-10 -->
+					        <div class="col-md-1"></div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

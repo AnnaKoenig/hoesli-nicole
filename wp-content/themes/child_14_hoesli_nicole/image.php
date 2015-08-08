@@ -15,7 +15,9 @@ get_header();
 
 	<section id="primary" class="content-area image-attachment">
 		<div id="content" class="site-content" role="main">
-
+			<div class="row">
+			        <div class="col-md-1"></div>
+			        <div class="col-md-10">
 	<?php
 		// Start the Loop.
 		while ( have_posts() ) : the_post();
@@ -34,6 +36,7 @@ get_header();
 						<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-meta -->
 				</header><!-- .entry-header -->
+
 
 				<div class="entry-content">
 					<div class="entry-attachment">
@@ -57,6 +60,7 @@ get_header();
 							'link_after'  => '</span>',
 						) );
 					?>
+				</div>
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->
 

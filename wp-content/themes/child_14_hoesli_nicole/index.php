@@ -32,45 +32,42 @@ get_header(); ?>
 				<div class="row">
 			        <div class="col-md-1"></div>
 			        <div class="col-md-10">
-			        	<header class="page-header">
-		         
-		            	<?php $queried_object = get_queried_object();
-		                echo $queried_object->name ; ?>
-
-		        		</header><!-- .page-header -->
-
-						
-		     
-			        <section class="gallery <?php echo $queried_object->name; ?>">
+			<a href ="<?php echo get_attachment_link(); ?>">      
+			<?php
+			    if ( have_posts() ) : ?>
 			     
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();   
+			        <?php echo $queried_object->name; ?>
+			     
+			            <?php // Start the Loop.
+			                while ( have_posts() ) : the_post(); 
 			                 
 			                // define attributes for image display
 			                $imgattr = array(
-			                    	'alt'   => trim( strip_tags( get_post_meta( $attachment_, 
-			                    	'_wp_attachment_image_alt', fals ) ) ),
-			                    	'post_type' => 'attachment',
-	   								'numberposts' => -1,
-	   								'post_status' => true,
-	   								'post_parent' => $post->ID
+			                    'alt'   => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ),
 			                ); ?>
-			         
-			                <div class="gallery-image">
-			                	<a href ="<?php echo get_attachment_link(); ?>">
-			                	<?php echo wp_get_attachment_image( $attachment->ID, 'image', $imgattr ); ?>
-			                </a></div>
-			                 
+			                
+			         		<?php 
+								// check if the post has a Post Thumbnail assigned to it.
+							if ( has_post_thumbnail( $post_id ) ) {
+								the_post_thumbnail();
+							} 
+								?>
+							<div class="gallery-item"> 
+							<?php the_content(); ?></a>
+								
+			                <?php echo wp_get_attachment_image( $post->ID, $imgattr ); ?>
+			                 	</div>
 			                <?php endwhile; ?>
 			         
-			        </section>
-		 
-					    <?php else :
-					        // If no content, include the "No posts found" template.
-					        get_template_part( 'content', 'none' );
-					 
-					    endif;
-					?>
-
+			 
+			    <?php else :
+			        // If no content, include the "No posts found" template.
+			        get_template_part( 'content', 'none' );
+			 
+			    endif;
+			?>
+						
+		     
 			        </div><!-- end col -->
 
 			        <div class="col-md-1"></div>

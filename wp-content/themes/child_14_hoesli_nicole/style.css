@@ -23,11 +23,17 @@ Version: 1.0
 body {
 	margin-top: 40px;
 }
+.gallery-item p{
+	display: none;
+}
 
+.gallery-item p:nth-child(2) {
+  display:block !important;
+}
 /*====================================================================== DELATED
 */
 aside#search-2, #recent-comments-2, #archives-2, #categories-2, #meta-2,
- header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text { 
+ header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text, #wpadminbar { 
 	display: none;
 }
 
