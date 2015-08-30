@@ -21,7 +21,20 @@
 			</div><!-- .site-info -->
 		
 	</div><!-- #page -->
+<!--
+		<script>
+			$(document).ready( function() {
+  
+			  $('.grid').isotope({
+			    itemSelector: '.grid-item',
+			    masonry: {
+			      columnWidth: 100
+			    }
+			  });
 
+			});
+
+		</script>-->
 	<?php wp_footer(); ?>
 	
 

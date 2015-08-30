@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 jQuery(document).ready( function($) {
   
   $('.grid').isotope({
-    itemSelector: '.grid-item',
+    itemSelector: '.grid-item a',
     masonry: {
       columnWidth: 100
     }

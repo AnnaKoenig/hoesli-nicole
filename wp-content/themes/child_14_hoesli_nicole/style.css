@@ -68,12 +68,14 @@ div#primary-sidebar {
 */
 .project-title em {
 	font-size: 20px;
-	font-family: Courier;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 600;
 	max-width: 200px;
 }
 .project-title span {
 	font-size: 10px;
-	font-family: Courier;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 600;
 	max-width: 200px;
 }
 
@@ -85,7 +87,7 @@ div#primary-sidebar {
 .project-text {
 	font-size: 14px;
 	font-weight: normal;
-	margin: 100px 30px 0px 30px;
+	margin: 100px 50px 0px 50px;
 }
 
 .image-title {
@@ -96,22 +98,25 @@ div#primary-sidebar {
 /*====================================================================== iso-grid
 */
 
-.grid-home {
-  	background: #fff;
+.grid {
+  background: #fff;
+  max-width: 1200px;
 }
-.grid-home .grid-item img{
-  	max-width: 300px;
-  	height: 100%;
-}
+
+/* clear fix */
 .grid:after {
-  	content: '';
-  	display: block;
-  	clear: both;
+  content: '';
+  display: block;
+  clear: both;
 }
-.grid-item {
-  	float: left;
-  	background: #fff;
-  	margin: 0 auto;
+
+/* ---- .grid-item ---- */
+
+.grid-item img {
+  float: left;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
 }
 
 /*====================================================================== Owl Slider
@@ -168,7 +173,7 @@ div#primary-sidebar {
 /*====================================================================== DELATED
 */
 
-aside#search-2, header.archive-header, #recent-comments-2, #archives-2, #categories-2, #meta-2, header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text, #wpadminbar, .site-info { 
+aside#search-2, header.archive-header, #recent-comments-2, #archives-2, #categories-2, #meta-2, header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text, #wpadminbar, .site-info, .nav-links { 
 	display: none;
 }
 

@@ -33,7 +33,7 @@ get_header(); ?>
 			        <div class="col-md-1"></div>
 
 			        <div class="col-md-10">
-			        	 <div class="grid-home">
+			        	 <div class="grid"><div class="grid-item">
 			     
 			<?php
 			    if ( have_posts() ) : ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 
 			                <a href ="<?php echo get_attachment_link(); ?>">
 
-			                <div class="grid-item">
+			                
 			                 
 			         		<?php 
 								// check if the post has a Post Thumbnail assigned to it.
