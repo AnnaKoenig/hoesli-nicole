@@ -20,7 +20,6 @@ Version: 1.0
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 body {
 	background-color: #fff;
 	color: #000;
@@ -41,22 +40,20 @@ a , a:hover, a:active, a:visited {
 li.current_page_item a { 
 	border-bottom: 1px solid; 
 }
-
 li {
 	list-style: none;
 }
-
 .current-menu-item div#primary-sidebar {
 	color: red;
-	font-family: cursive;
 	border-bottom: solid;
 }
-
 div#primary-sidebar {
 	font-size: 13px;
 	/*font-family: Courier;*/
 	text-align: center;
 	font-style:italic;
+	font-family: "Courier New", Courier;
+	font-weight: 500;
 	opacity: 0.7;
 	line-height: 18pt;
 	margin-top: 30px;
@@ -78,18 +75,15 @@ div#primary-sidebar {
 	font-weight: 600;
 	max-width: 200px;
 }
-
 .subline {
 	font-size: 11px;
 	font-weight: normal;
 }
-
 .project-text {
 	font-size: 14px;
 	font-weight: normal;
 	margin: 100px 50px 0px 50px;
 }
-
 .image-title {
 	font-size: 10px;
 	margin-left: -8%;
@@ -102,16 +96,11 @@ div#primary-sidebar {
   background: #fff;
   max-width: 1200px;
 }
-
-/* clear fix */
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
-
-/* ---- .grid-item ---- */
-
 .grid-item img {
   float: left;
   max-width: 300px;
@@ -173,7 +162,7 @@ div#primary-sidebar {
 /*====================================================================== DELATED
 */
 
-aside#search-2, header.archive-header, #recent-comments-2, #archives-2, #categories-2, #meta-2, header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text, #wpadminbar, .site-info, .nav-links { 
+aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #archives-2, #categories-2, #meta-2, header.entry-header, h2.site-description, h1.widget-title, h1.screen-reader-text, #wpadminbar, .site-info, .nav-links { 
 	display: none;
 }
 
