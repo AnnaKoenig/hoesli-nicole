@@ -29,9 +29,7 @@ get_header(); ?>
 					twentyfourteen_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
+					
 				endwhile;
 			?>
 		</div><!-- end col-md-10 -->
@@ -40,6 +38,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+
 get_footer();

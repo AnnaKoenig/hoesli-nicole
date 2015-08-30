@@ -31,8 +31,10 @@ get_header(); ?>
 -->			
 				<div class="row">
 			        <div class="col-md-1"></div>
+
 			        <div class="col-md-10">
-			<a href ="<?php echo get_attachment_link(); ?>">      
+			        	 <div class="grid-home">
+			     
 			<?php
 			    if ( have_posts() ) : ?>
 			     
@@ -45,21 +47,25 @@ get_header(); ?>
 			                $imgattr = array(
 			                    'alt'   => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ),
 			                ); ?>
-			                
+
+			                <a href ="<?php echo get_attachment_link(); ?>">
+
+			                <div class="grid-item">
+			                 
 			         		<?php 
 								// check if the post has a Post Thumbnail assigned to it.
 							if ( has_post_thumbnail( $post_id ) ) {
-								the_post_thumbnail();
+								the_post_thumbnail( $size, $attr );
 							} 
 								?>
-							<div class="gallery-item"> 
-							<?php the_content(); ?></a>
+							
+		
 								
 			                <?php echo wp_get_attachment_image( $post->ID, $imgattr ); ?>
-			                 	</div>
-			                <?php endwhile; ?>
+			                 	
+			                <?php endwhile; ?></div></a>
 			         
-			 
+			
 			    <?php else :
 			        // If no content, include the "No posts found" template.
 			        get_template_part( 'content', 'none' );
@@ -67,26 +73,14 @@ get_header(); ?>
 			    endif;
 			?>
 						
-		     
+		     			</div>
 			        </div><!-- end col -->
 
-			        <div class="col-md-1"></div>
-
-	    	<!-- isotope -->
-	    	<!-- 
-			<script>
-				$('.grid').isotope({
-				  itemSelector: '.grid-item',
-				  percentPosition: true,
-				  masonry: {
-				    // use outer width of grid-sizer for columnWidth
-				    columnWidth: '.grid-sizer'
-				  }
-				})
-			</script>
--->
+			        
+	    	
 		</div><!-- #content -->
-	</div><!-- #primary -->
+	</div><!-- #primary --><div class="col-md-1"></div>
+
 	<?php get_sidebar( 'content' ); ?>
 </div><!-- #main-content -->
 
