@@ -25,12 +25,13 @@
 		  <?php $attachments = get_posts( $args );
 				     if ( $attachments ); {
 				        foreach ( $attachments as $attachment ) { ?>
+				        <div class="wrapper-owl">
 		<div><?php echo wp_get_attachment_image( $attachment->ID, 'full' );
 					echo '<div class="image-title">';
 					echo $image_title = $attachment->post_title ;
 					echo '</div>';
 		?>
-		
+		</div>
 		</div>
 		<?php
 

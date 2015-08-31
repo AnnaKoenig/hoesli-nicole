@@ -26,19 +26,23 @@ get_header(); ?>
 				query_posts( 'orderby=rand&posts_per_page=1' );
 
 				// The Loop
-				while ( have_posts() ) : the_post();
-				    the_post_thumbnail( $size, $attr );
+				while ( have_posts() ) : the_post(); ?>
+				
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php
+					    the_post_thumbnail( $size, $attr );
 
-				endwhile;
+					endwhile;
 
-				// Reset Query
-				wp_reset_query();
-				?>
-			
-				<?php
-				$content = get_the_content('posts_per_page');
-				print $the_post;
-				?>
+					// Reset Query
+					wp_reset_query();
+					?>
+				</a>
+				
+					<?php
+					$content = get_the_content('posts_per_page');
+					print $the_post;
+					?>
 			</a>
 			     
 			</div><!-- end col -->
