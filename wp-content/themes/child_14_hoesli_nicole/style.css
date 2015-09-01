@@ -86,7 +86,10 @@ div#primary-sidebar {
 }
 .image-title {
 	font-size: 10px;
-	margin-left: -8%;
+	float: right;
+	display: inline-block;
+	margin-left: 8%;
+	margin-top: 600px;
 }
 
 /*====================================================================== iso-grid
@@ -110,23 +113,35 @@ div#primary-sidebar {
 
 /*====================================================================== Owl Slider
 */
-
-#owl-demo .owl-item div{
-  padding: 0% 10% 0% 10%;
+#owl-demo .owl-item img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+}
+#owl-demo .owl-item  div{
   position: relative;
 }
-#owl-demo .owl-item img{
-  display: block;
-  width: 100%;
-  height: auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+.owl-carousel .owl-item {
+      display: table-cell;
+      float: none;
+
+
+	margin-top: -90px;
 }
-.wrapper-owl {
-margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+.wrapper-with-margin {
+	height: 900px;
+}
+.owl-theme .owl-controls{
+	margin-top: -15%;
+	text-align: right;
+	margin-right: 12%;
+	position: inherit;
 }
 /*====================================================================== primary nav-bar
 */
@@ -179,7 +194,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 }
 .col-md-4, .col-md-10, .col-md-1, .col-md-8, .col-md-2, .col-md-10#works {
 	background-color: rgba(255, 255, 255, 0);
-	border: solid 1px; 
+	/*border: solid 1px;*/
 }
 .col-md-4#project-list, .col-md-8#single {
 	float:left;

@@ -8,22 +8,18 @@ jQuery.noConflict();
 document.oncontextmenu = function() {return true;};
 
 
-/*======================================== isotope 
-==================================================*/
-
-/*======================================== owl-slider
+/*======================================== owl-slider/ isotope
 ==================================================*/
 jQuery(document).ready(function($) {
       $("#owl-demo").owlCarousel({
-        navigation:true,
-        loop:true,
+        navigation: true,
+        loop: true,
         paginationSpeed : 1000,
         goToFirstSpeed : 2000,
         singleItem : true,
-        autoHeight : true,
         transitionStyle:"fade"
-
       });
+      
     });
 
 jQuery(document).ready( function($) {
@@ -36,5 +32,6 @@ jQuery(document).ready( function($) {
   });
 
 });
+
 
 })();

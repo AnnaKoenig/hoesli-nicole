@@ -133,7 +133,7 @@ if (typeof Object.create !== "function") {
             if (base.options.lazyLoad === true) {
                 base.lazyLoad();
             }
-            if (base.options.autoHeight === true) {
+            if (base.options.autoHeight === false) {
                 base.autoHeight();
             }
             base.onVisibleItems();

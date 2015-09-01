@@ -4,9 +4,9 @@
 */
 
 .owl-theme .owl-controls{
-	margin-top: -10px;
 	text-align: right;
 	margin-right: 12%;
+	position: inherit;
 }
 
 /* Styling Next and Prev buttons */
