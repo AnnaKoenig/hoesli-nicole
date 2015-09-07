@@ -13,7 +13,6 @@
 
 	<div class="entry-content"> 
 		<?php 
-
 		 $args = array(
 		   'post_type' => 'attachment',
 		   'numberposts' => -1,
@@ -23,40 +22,38 @@
 		 
 		  <div id="owl-demo" class="owl-carousel">
 		  <?php $attachments = get_posts( $args );
-				     if ( $attachments ); {
-				        foreach ( $attachments as $attachment ) { ?>
+	     	if ( $attachments ); {
+				
+				$i = 0;
+				$len = count($attachments);
+
+		        foreach ( $attachments as $attachment ) { ?>
 				       
-		<div>
-			<div class="wrapper-with-margin">
-			<?php echo wp_get_attachment_image( $attachment->ID, 'full' );
-	 
-					
-				 	echo '<div class="image-title">';
-					echo $image_title = $attachment->post_title ;
-					echo '</div>';
-					echo the_field('video'); 
+					<div>
+						<div class="wrapper-with-margin">
+							<?php echo wp_get_attachment_image( $attachment->ID, 'full' );
+					 
+									
+								 	echo '<div class="image-title">';
+									echo $image_title = $attachment->post_title ;
+									echo '</div>';
 
-
-			?>
-			
-	
-
-			</div>
-			
-		</div>
+									if ($i == $len - 1) { echo the_field('video'); }
+									$i++;
+							?>
+						</div>
+					</div>
 
 		<?php
-
-				          }
+	          	}
 				     }
-
 				?>
+
 
 		</div>
 		<div class="project-text">
 			<?php
 				the_content();
-
 			?> 
 			<div class="project-title"><em><?php the_field('project_title'); ?></em><span class="date"><?php the_field('datum'); ?></span></div>
 			

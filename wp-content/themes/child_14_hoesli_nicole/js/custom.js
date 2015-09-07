@@ -15,7 +15,6 @@ jQuery(document).ready(function($) {
         navigation: true,
         loop: true,
         paginationSpeed : 1000,
-        goToFirstSpeed : 2000,
         singleItem : true,
         video: true,
         transitionStyle:"fade"

@@ -33,7 +33,7 @@ get_header(); ?>
 			        <div class="col-md-1"></div>
 
 			        <div class="col-md-10">
-			        	 <div class="grid"><div class="grid-item">
+			        	 <div class="grid"><div class="grid-item" id="container">
 			     
 			<?php
 			    if ( have_posts() ) : ?>

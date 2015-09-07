@@ -5,7 +5,6 @@ Template: twentyfourteen
 Author: Anna König
 Autor URI: www.annakoenig.berlin
 Version: 1.0
-
 @import url('../twentyfourteen/style.css');
 */
 @import url('css/bootstrap.min.css');
@@ -107,6 +106,7 @@ span.date {
 .grid {
   background: #fff;
   max-width: 1200px;
+
 }
 .grid:after {
   content: '';
@@ -122,7 +122,7 @@ span.date {
 
 /*====================================================================== Owl Slider
 */
-#owl-demo .owl-item img, #owl-demo .owl-item iframe {
+#owl-demo .owl-item img {
     display: block;
     max-width: 80%;
     height: auto;
@@ -133,24 +133,39 @@ span.date {
   	position: absolute;
   	top: 0; left: 0; bottom: 0; right: 0;
 }
+#owl-demo .owl-item iframe {
+    display: block;
+    width: 80%;
+    height: 60%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+}
 #owl-demo .owl-item  div{
-  position: relative;
+  	position: relative;
 }
 .owl-carousel .owl-item {
-      display: table-cell;
-      float: none;
-
-
-	margin-top: -90px;
+    display: table-cell;
+    float: none;
+    margin-top: -1%;
 }
 .wrapper-with-margin {
-	height: 900px;
+	height: 800px;
 }
 .owl-theme .owl-controls{
 	margin-top: -15%;
 	text-align: right;
 	margin-right: 12%;
-	position: inherit;
+	position: relative;
+}
+.controls {
+display: none;
+}
+.sidedock{
+display:none;
 }
 /*====================================================================== primary nav-bar
 */
@@ -289,8 +304,6 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
     }
 
     /* Extra Small Devices, Phones */ 
-
-
 
 
 
