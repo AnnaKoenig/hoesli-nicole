@@ -46,6 +46,9 @@
 				<div><?php if( get_field('video') ) ?>
 						<div class="wrapper-with-margin">
 							<?php 
+								echo '<div class="image-title">';
+								echo $image_title = $attachment->post_title ;
+								echo '</div>';
 					 			echo the_field('video'); 
 							?>
 						</div>
