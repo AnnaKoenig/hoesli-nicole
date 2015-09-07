@@ -20,13 +20,10 @@
 		   'post_parent' => $post->ID
 		  );?>
 		 
-		  <div id="owl-demo" class="owl-carousel">
-		  <?php $attachments = get_posts( $args );
+		<div id="owl-demo" class="owl-carousel">
+		<?php $attachments = get_posts( $args );
 	     	if ( $attachments ); {
 				
-				$i = 0;
-				$len = count($attachments);
-
 		        foreach ( $attachments as $attachment ) { ?>
 				       
 					<div>
@@ -38,28 +35,57 @@
 									echo $image_title = $attachment->post_title ;
 									echo '</div>';
 
-									if ($i == $len - 1) { echo the_field('video'); }
-									$i++;
+									
 							?>
 						</div>
 					</div>
-
 		<?php
 	          	}
 				     }
 				?>
-
+				<div><?php if( get_field('video') ) ?>
+						<div class="wrapper-with-margin">
+							<?php 
+					 			echo the_field('video'); 
+							?>
+						</div>
+				</div>
 
 		</div>
-		<div class="project-text">
+		
 			<?php
 				the_content();
 			?> 
-			<div class="project-title"><em><?php the_field('project_title'); ?></em><span class="date"><?php the_field('datum'); ?></span></div>
 			
-			<div class="subline"><br><?php the_field('subline'); ?></br></div>
-			<div class="project-text"><?php the_field('project_texts'); ?></div>
-    	</div>
+
+
+
+      		<div>
+		      <a href="#eng" id="eng" class="toggle">
+		      			<div class="project-title"><em><?php the_field('project_title'); ?></em>
+		      			<span class="date"><?php the_field('datum'); ?></span></div>
+						
+						<div class="subline"><br><?php the_field('subline'); ?></br></div>
+						<div class="project-text"><?php the_field('project_texts'); ?></div>
+		      </a>
+		      
+		      <a href="#" class="info"></b></a>
+		      <div class="slide">
+		        <p>
+		          <div class="project-title"><em><?php the_field('project_title'); ?></em>
+		      	  <span class="date"><?php the_field('datum'); ?></span></div>
+		          <div class="subline_eng">
+		        </div>
+		          	<div class="project-text_eng">
+		          	<div class="subline"><br><?php the_field('subline_eng'); ?></br></div>
+					<div class="project-text"><?php the_field('project_texts_eng'); ?></div>
+					<div>
+        		</p>
+      		</div>
+
+
+
+
 	</div><!-- .entry-content --></div>
 		  
 	
