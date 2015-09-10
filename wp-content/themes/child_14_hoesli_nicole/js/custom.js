@@ -18,21 +18,20 @@ jQuery(document).ready(function($) {
         singleItem : true,
         video: true,
         transitionStyle:"fade"
-        
+
       });
-      
+
     });
 
-jQuery(document).ready( function($) {
-  
-  $('.grid').isotope({
-    itemSelector: '.grid-item a',
-    masonry: {
-      columnWidth: 100
-    }
-  });
 
-});
+jQuery(document).ready( function($) {
+
+    $('.grid').isotope({
+    	layoutMode: 'fitRows',
+      itemSelector: '.grid-item a'
+    });
+
+  });
 
 
 })();

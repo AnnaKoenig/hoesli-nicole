@@ -27,7 +27,7 @@ get_header(); ?>
 
 				// The Loop
 				while ( have_posts() ) : the_post(); ?>
-				
+
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 					<?php
 					    the_post_thumbnail( $size, $attr );
@@ -38,17 +38,17 @@ get_header(); ?>
 					wp_reset_query();
 					?>
 				</a>
-				
+
 					<?php
 					$content = get_the_content('posts_per_page');
 					print $the_post;
 					?>
 			</a>
-			     
+
 			</div><!-- end col -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	
+
 </div><!-- #main-content -->
 
 <?php

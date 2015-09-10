@@ -24,62 +24,58 @@ get_header(); ?>
 		get_template_part( 'featured-content' );
 	}
 ?>
-
+<div class="container">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////row 1
--->			
-				<div class="row">
-			        <div class="col-md-1"></div>
 
-			        <div class="col-md-10">
-			        	 <div class="grid"><div class="grid-item" id="container">
-			     
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////row 1
+-->
+				<div class="row">
+			        <div class="col-md-12-nomargin">
+								<div class="center">
+			        	 <div class="grid">
+									 <div class="grid-item">
+
 			<?php
 			    if ( have_posts() ) : ?>
-			     
+
 			        <?php echo $queried_object->name; ?>
-			     
+
 			            <?php // Start the Loop.
-			                while ( have_posts() ) : the_post(); 
-			                 
+			                while ( have_posts() ) : the_post();
+
 			                // define attributes for image display
 			                $imgattr = array(
 			                    'alt'   => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ),
 			                ); ?>
 
 			                <a href ="<?php echo get_attachment_link(); ?>">
-
-			                
-			                 
-			         		<?php 
+										<?php
 								// check if the post has a Post Thumbnail assigned to it.
 							if ( has_post_thumbnail( $post_id ) ) {
 								the_post_thumbnail( $size, $attr );
-							} 
+							}
 								?>
-							
-		
-								
-			                <?php echo wp_get_attachment_image( $post->ID, $imgattr ); ?>
-			                 	
+								<?php echo wp_get_attachment_image( $post->ID, $imgattr ); ?>
+
 			                <?php endwhile; ?></div></a>
-			         
-			
-			    <?php else :
+
+
+			    <?php else : echo 'empty';
+
 			        // If no content, include the "No posts found" template.
 			        get_template_part( 'content', 'none' );
-			 
+
 			    endif;
 			?>
-						
-		     			</div>
-			        </div><!-- end col -->
 
-			        
-	    	
-		</div><!-- #content -->
-	</div><!-- #primary --><div class="col-md-1"></div>
+		     			</div>
+						</div>
+			   </div>
+			 </div><!-- end col -->
+			</div>
+		</div><!-- primary -->
+	</div><!-- content -->
 
 	<?php get_sidebar( 'content' ); ?>
 </div><!-- #main-content -->
