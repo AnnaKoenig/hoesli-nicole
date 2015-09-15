@@ -30,7 +30,7 @@ function load_javascript() {
         wp_register_script( 'owl', get_stylesheet_directory_uri() . '/js/owl.js', array('jquery'), false, true );
         wp_enqueue_script( 'owl' );
 
-        wp_register_style('owl-style-carousel',  get_stylesheet_directory_uri() . '/js/owl.carousel.js.');  
+        wp_register_style('owl-style-carousel',  get_stylesheet_directory_uri() . '/js/owl.carousel.js.');
 
         wp_register_style('isotope',  get_stylesheet_directory_uri() . '/js/isotope.pkgd.js.');
         wp_enqueue_style('isotope');

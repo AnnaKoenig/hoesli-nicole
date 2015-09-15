@@ -25,25 +25,23 @@ get_header(); ?>
 				// The Query
 				query_posts( 'orderby=rand&posts_per_page=1' );
 
-				// The Loop
 				while ( have_posts() ) : the_post(); ?>
 
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 					<?php
-					    the_post_thumbnail( $size, $attr );
+					if ( has_post_thumbnail() ) {
+
+					    echo the_post_thumbnail( $size, $attr, 'thumbnail' );
+						}
 
 					endwhile;
 
-					// Reset Query
 					wp_reset_query();
 					?>
 				</a>
 
-					<?php
-					$content = get_the_content('posts_per_page');
-					print $the_post;
-					?>
-			</a>
+					
+</a>
 
 			</div><!-- end col -->
 		</div><!-- #content -->
