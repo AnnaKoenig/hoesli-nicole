@@ -17,17 +17,20 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 	<div class="row">
 		<div class="col-md-4">
-			  <div class="news_title">
-			  	<?php
-				/* translators: %s: Name of current post */
-				the_content();
+			<div id="allnews-texte">
 
-			?> 
-			  </div>
-			  <div class="news-text">
-			  </div>
+				<?php
+					// Start the Loop.
+					while ( have_posts() ) : the_post();
+
+						// Include the page content template.
+						get_template_part( 'content', 'page' );
+
+					endwhile;
+				?>
+
 		</div>
-
+	</div>
 		<div class="col-md-8">
 		<?php
 			if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
@@ -37,21 +40,13 @@ get_header(); ?>
 		?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-				
-			<?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
 
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
 
-				endwhile;
-			?>
 		</div>
-		
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	
+
 </div><!-- #main-content -->
 
 <?php

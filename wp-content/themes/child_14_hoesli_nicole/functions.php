@@ -35,7 +35,38 @@ function load_javascript() {
         wp_register_style('isotope',  get_stylesheet_directory_uri() . '/js/isotope.pkgd.js.');
         wp_enqueue_style('isotope');
 
+
         wp_register_style('isotope.min',  get_stylesheet_directory_uri() . '/js/isotope.pkgd.min.js.');
         wp_enqueue_style('isotope.min');
 
-}*/
+}*/#
+
+
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'index-bild',
+            'id' => 'secondary-thumbnail',
+            'post_type' => 'post',
+        )
+    );
+}
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'index-bild-2',
+            'id' => 'third-thumbnail',
+            'post_type' => 'post',
+						'post_type' => 'page'
+        )
+    );
+}
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'cv-bild',
+            'id' => 'cv-thumbnail',
+            'post_type' => 'page',
+        )
+    );
+}

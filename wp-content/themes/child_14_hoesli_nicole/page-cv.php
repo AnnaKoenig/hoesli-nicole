@@ -19,7 +19,7 @@ get_header(); ?>
 		<div class="col-md-2">
 		</div>
 
-			<div class="col-md-10">
+			<div class="col-md-10" id="cv">
 			<?php
 				if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
 					// Include the featured content template.

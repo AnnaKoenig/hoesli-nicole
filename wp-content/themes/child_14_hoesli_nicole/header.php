@@ -28,19 +28,21 @@
 	<?php wp_head(); ?>
 
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.carousel.css" media="all" type="text/css" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.theme.css" media="all" type="text/css" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.transitions.css" media="all" type="text/css" rel="stylesheet">
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.theme.css" media="all" type="text/css" rel="stylesheet">
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.transitions.css" media="all" type="text/css" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-	
-	
+
+
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.min.js"></script>
 
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/isotope.pkgd.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/fake-element.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.7.1.min.js"></script>
 
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.10.2.js"></script>
 
@@ -58,7 +60,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		 <nav class="navbar navbar-inverse navbar-fixed-top">
-  
+
       <div class="header-main">
 		<div class="navbar-header">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -68,11 +70,11 @@
 		</div>
 	  </div>
 
-		
+
     </nav>
     <script type="text/javascript">
 				$(document).ready(function() {
-		 
+
 				  $("#owl-demo").owlCarousel({
 				    autoPlay : 3000,
 				    stopOnHover : true,
@@ -83,10 +85,9 @@
 				    autoHeight : true,
 				    transitionStyle:"fade"
 				  });
-				 
+
 				});
 			</script>
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
-

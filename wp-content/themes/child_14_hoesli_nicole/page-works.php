@@ -15,9 +15,9 @@
 get_header(); ?>
 
 <div id="main-content" class="main-content">
-
+<div class="container">
 <div class="row">
-	<div class="col-md-4"><?php get_sidebar( ); ?></div>
+	<div class="col-md-4" id="works"><?php get_sidebar( ); ?></div>
 			<div class="col-md-8" id="works">
 
 <a href ="<?php echo get_attachment_link(); ?>">
@@ -40,13 +40,14 @@ get_header(); ?>
 					?>
 				</a>
 
-					
+
 </a>
 
 			</div><!-- end col -->
+			<div class="col-md-1"></div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
+</div>
 </div><!-- #main-content -->
 
 <?php
