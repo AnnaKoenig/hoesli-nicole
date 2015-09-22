@@ -21,11 +21,9 @@
 	</nav>
 	<?php endif; ?>
 
-
-		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-			<?php query_posts('category_name=works'); ?>
-		<?php if (have_posts()) : the_post(); ?>
+	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-		</div><!-- #primary-sidebar -->
-		<?php endif; ?>
-		</div><!-- #secondary -->
+	</div><!-- #primary-sidebar -->
+	<?php endif; ?>
+</div><!-- #secondary -->
