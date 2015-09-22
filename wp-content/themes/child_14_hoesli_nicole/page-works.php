@@ -17,13 +17,13 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 <div class="container">
 <div class="row">
-	<div class="col-md-4" id="works"><?php get_sidebar( ); ?></div>
+	<div class="col-md-4" id="works"><?php wp_nav_menu( array('menu' => 'works' )); ?></div>
 			<div class="col-md-8" id="works">
 
 <a href ="<?php echo get_attachment_link(); ?>">
 				<?php
 				// The Query
-				query_posts( 'orderby=rand&posts_per_page=1' );
+				query_posts( 'orderby=rand&posts_per_page=1&category_name=works' );
 
 				while ( have_posts() ) : the_post(); ?>
 

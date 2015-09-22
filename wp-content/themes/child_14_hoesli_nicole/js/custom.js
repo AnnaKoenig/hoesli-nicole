@@ -24,17 +24,8 @@ jQuery(document).ready(function($) {
     });
 
 
-jQuery(document).ready( function($) {
 
-    $('.grid').isotope({
-    	layoutMode: 'fitRows',
-      itemSelector: '.grid-item a',
-      masonry: {
-      columnWidth: 100
-    }
-    });
 
-  });
 
 // language toggle
 jQuery(document).ready(function($){
@@ -60,6 +51,18 @@ jQuery(document).ready(function($){
 
   init_Toggles();
 
+  jQuery(document).ready( function($) {
+
+      $('.grid').isotope({
+      	layoutMode: 'fitRows',
+        itemSelector: '.grid-item a',
+        resizable: true,
+        masonry: {
+        columnWidth: 100
+      }
+      });
+
+    });
 // container
 jQuery(document).ready(function($){
 

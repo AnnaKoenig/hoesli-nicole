@@ -18,26 +18,31 @@ get_header(); ?>
 	<div class="row">
 		<div class="col-md-4">
 			<div id="allnews-texte">
-
-				<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-
-						// Include the page content template.
-						get_template_part( 'content', 'page' );
-
-					endwhile;
-				?>
+				<div class="news-text">
+						<?php the_field('hed_news'); ?>
+						
+					<span class="date-news"><?php the_field('dat_news'); ?></span></div>
+					<div class="subline-news"><?php the_field('sub_news'); ?></div>
 
 		</div>
 	</div>
 		<div class="col-md-8">
-		<?php
-			if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-				// Include the featured content template.
-				get_template_part( 'featured-content' );
-			}
-		?>
+			<?php
+						// The Query
+						query_posts( array ( 'category_name' => 'news', 'posts_per_page' => -1 ) );
+
+							// The Loop
+							while ( have_posts() ) : the_post();
+							echo '<div class="bildbeschr">';
+							the_content( 'Read the full post »' );
+							echo '</div>';
+							endwhile;
+
+						// Reset Query
+						wp_reset_query();
+						?>
+
+
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 

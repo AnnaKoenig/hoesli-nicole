@@ -67,7 +67,8 @@ get_header(); ?>
 														        get_post_type(),
 														        'third-thumbnail'
 														    );
-																endif; ?>
+
+														endif; ?>
 
 													<?php if (class_exists('MultiPostThumbnails')
 													&& MultiPostThumbnails::has_post_thumbnail('page', 'secondary-image')) :
