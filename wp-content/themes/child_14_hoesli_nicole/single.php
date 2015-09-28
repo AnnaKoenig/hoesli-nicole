@@ -29,9 +29,18 @@ get_header(); ?>
 					twentyfourteen_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
-					
+
 				endwhile;
 			?>
+			<div id="allnews-texte">
+				<div class="news-text">
+					<?php if( get_field('fett') ): ?>
+					<?php the_field('fett');  endif; ?>
+
+					<span class="date-news"><?php the_field('number'); ?></span></div>
+					<div class="subline-news"><?php the_field('small'); ?></div>
+
+		</div>
 		</div><!-- end col-md-10 -->
 					        <div class="col-md-1"></div>
 		</div><!-- #content -->

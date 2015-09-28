@@ -48,7 +48,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
-	
+
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
@@ -70,4 +70,3 @@
 
 	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 </article><!-- #post-## -->
-

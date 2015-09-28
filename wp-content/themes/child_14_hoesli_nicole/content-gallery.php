@@ -51,6 +51,7 @@
 				<?php endif; ?>
 
 		</div><!-- Owl-Demo End-->
+		<div class="artikel-texte">
 			<?php get_the_content( ) ?>
 
 								<!-- TITLE/DATUM/SUBLINE 1-5-->
@@ -115,6 +116,7 @@
 										<div class="project-text"><?php the_field('project_texts'); ?></div>
 						</div>
 					</div>
+				</div>
 		</div><!-- .entry-content -->
 
 	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>

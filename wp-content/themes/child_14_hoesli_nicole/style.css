@@ -43,6 +43,15 @@ img {
   display: block;
   max-width: 100%;
 }
+.col-md-2#news {
+  max-width:50%;
+  height: 100%;
+}
+.col-md-10#news {
+  max-width:100%;
+  height: 100%;
+  float: left;
+}
 /*====================================================================== Links
 */
 a , a:hover, a:active, a:visited {
@@ -67,6 +76,9 @@ div#primary-sidebar {
 }
 /*====================================================================== Text-Styles
 */
+.artikel-texte {
+  margin-top: -60px;
+}
 .project-title em {
 	font-size: 1.4em;
 	font-family: "Courier New", Courier, monospace;
@@ -142,19 +154,20 @@ span.date {
   z-index: -999999;
 }
 .news-text {
-  margin-top: 10em;
+  margin-top: 70px;
   font-size: 14px;
-	font-family: "Courier New", Courier, monospace;
-	font-weight: 600;
-	max-width: 200px;
-	letter-spacing: 0.05em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  width: 600px;
+  letter-spacing: 0.05em;
 }
 span.date-news {
 	font-size: 10px;
 	font-family: "Courier New", Courier, monospace;
 	font-weight: 600;
 	max-width: 200px;
-  display: inline-block;
+	display: inline-block;
+	float: none;
 }
 .subline-news {
   font-size: 11px;
@@ -163,36 +176,41 @@ span.date-news {
   margin: 0px 0px 10px 0px;
 }
 #allnews-texte {
-  margin-left: 40px;
+  margin-left: 60px;
+  height: 800px;
 }
 .bildbeschr {
   font-size: 0.9em;
+  margin-left: 3em;
 }
 .bildbeschr img{
   max-width: 60%;
   margin-left: 10em;
+  margin-top: 50px;
 }
 /*====================================================================== iso-grid
 */
-
-#container {
-     /*border: 1px solid #666;*/
-    margin: 0 auto;
-    /* padding: 50px 100px 0px 100px; */
-    margin-bottom: 20px;
-    max-width: 2200px;
-    min-width: 100vh;
-    margin-left: 0.5em;
-    margin-right: -6em;
-}
+/*.grid#container {
+     border: 1px solid #666;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     max-width: 100%;
+     min-width: 100vh;
+     left: 0;
+     right: 0;
+}*/
 .grid {
-  max-width: 1200px;
+  max-width: 2200px;
   margin: 0 auto;
   padding: 30px 50px 0px 0px;
   position: absolute;
   position: absolute;
   /* border: solid red; */
   text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: 1em;
+  margin-right: -1em;
 }
 .grid:after {
   content: '';
@@ -261,44 +279,6 @@ span.date-news {
 .wrapper-with-margin-none {
   display: none;
 }
-.owl-buttons {
-    margin-top: -50em;
-    position: relative;
-    margin-right: -5em;
-    text-align: right;
-    font-size: 16px;
-}
-/*.owl-theme .owl-controls {
-    margin-top: -8em;
-    text-align: right;
-    margin-right: 12%;
-    position: inherit;
-}*/
-/*#owl-demo .owl-buttons div {
-  background: transparent;
-  position: absolute;
-  top: 37%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-   margin: 0;
-  border-radius: 0;
-  opacity: 1;
-  font-size: 1em;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0 20px 10px 20px;
-}*/
-/*#owl-demo .owl-buttons div:hover {
-  color: #000;
-}
-#owl-demo .owl-prev {
-  left: 1.3em;
-}
-#owl-demo .owl-next {
-  right: -0.5em;
-}*/
-
 
 /*====================================================================== primary nav-bar
 */
@@ -309,8 +289,8 @@ span.date-news {
 .site-title {
   float: left;
   font-size: 1.8em;
-  margin-left: 40px;
-  margin-top: 42px;
+  margin-left: 60px;
+  margin-top: 60px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   opacity: 0.4;
@@ -318,7 +298,7 @@ span.date-news {
 }
 .primary-navigation {
 	float: left;
-	margin: 30px 10px 0px 90px;
+	/* margin: 30px 10px 0px 90px; */
 	padding: 0;
 }
 .site-navigation ul {
@@ -350,9 +330,9 @@ span.date-news {
     font-style: italic;
     font-family: "Courier New", Courier;
     font-weight: 500;
-    line-height: 23pt;
+    line-height: 18pt;
     margin-top: 100px;
-    margin-left: -15px;
+    margin-left: -100px;
     }
 /*====================================================================== ENG/DE-Toggle
  */
@@ -414,7 +394,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 }
 .col-md-12#nomargin {
    margin-top: -3em;
-   left: 0;
+   /* left: 0; */
    /* right: -10em; */
 }
 /*.col-md-10#cv {
@@ -428,8 +408,8 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 	float:right;
 }
 .col-md-8#works {
-	padding-right: 30px;
-  padding-left: 15px
+	/* padding-right: 30px; *//* padding-left: 15px
+ */
 }
 .col-md-8#work-list {
 	float:right;
@@ -439,16 +419,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {}
 @media (min-width: 1200px) {
-  /*#owl-demo .owl-buttons div {
-    background: transparent;
-    position: relative;
-  }
-  .owl-theme .owl-controls {
-    margin-top: 0em;
-    text-align: right;
-    margin-right: 12%;
-  position: inherit;
-}*/
+
 }
 @media (max-width: 992px) {
   .wrapper-with-margin {
@@ -457,31 +428,27 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
   }
   nav .site-navigation {
   margin-left: 40px;
-  margin-top: 30px;
+  margin-top: 50px;
   }
-  /*#owl-demo .owl-buttons div {
-    background: transparent;
-    position: inherit;
-    margin-top: 10em;
-}*/
 .owl-carousel .owl-item {
   display: table-cell;
   float: none;
-  margin-top: -10em;
+  /* margin-top: 0em; */
+}
+.owl-buttons {
+    margin-top: -150px;
+    position: relative;
+    margin-right: 0px;
+    text-align: right;
+    font-size: 16px;
 }
 .image-title {
     font-size: 0.8em;
     float: left;
     display: inline-block;
-    margin-left: 4.5em;
-    margin-top: 680px;
+    margin-left: 2.5em;
+    margin-top: 650px;
 }
-/*.owl-theme .owl-controls {
-    margin-top: -25em;
-    text-align: right;
-    margin-right: 12%;
-     position: inherit;
-}*/
 .toggle-texte {
   position: inherit;
   right: 0;
@@ -489,41 +456,48 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
   height: auto;
   z-index: -999999;
 }
+.col-md-10#news {
+    max-width: 80%;
+    height: 100%;
+    float: right;
+    margin-top: -110em;
+}
 }
 @media (min-width: 992px) {
   nav .site-navigation {
-  margin-left: 40px;
-  margin-top: 30px;
+  /* margin-left: 40px; */
+  margin-top: 50px;
   }
-  /*#owl-demo .owl-buttons div {
-    background: transparent;
-     position: absolute;
-     top: 40%;
-  }*/
   .col-md-8#works img {
     padding: 50px 0px 0px 0px;
     display: block;
     max-width: 100%;
   }
+  .owl-buttons {
+    margin-top: -800px;
+    position: relative;
+    margin-right: -50px;
+    text-align: right;
+    font-size: 16px;
 }
-
+}
 @media (max-width: 768px) {
   nav .site-navigation {
-  margin-left: 40px;
-  margin-top: 32px;
+  /* margin-left: 30px; */
+  margin-top: 50px;
   }
   .navbar-header {
   float: left;
   width: 100%;
     }
     .owl-carousel .owl-item {
-    display: table-cell;
+    /* display: table-cell; */
     float: none;
-    margin-top: -200px;
+    /* margin-top: 200px; */
   }
   .wrapper-with-margin {
     height: 500px;
-    margin-top: 0em;
+    margin-top: 0px;
   }
 }
 
@@ -539,7 +513,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
   font-size: 1em;
  }
   nav .site-navigation {
-  margin-left: 50px;
+  margin-left: 0px;
   }
 }
 
@@ -553,7 +527,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 	}
   nav .site-navigation {
   margin-left: 30px;
-  /* margin-top: 0px; */
+  margin-top: 50px;
   }
   .image-title {
     font-size: 0.8em;
@@ -561,11 +535,6 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
     display: inline-block;
     margin-left: 2em;
     margin-bottom: 10px;
-}
- #owl-demo .owl-buttons div {
-    background: transparent;
-    position: inherit;
-    margin-top: -70em;
 }
 .grid-item img {
     /* float: left; */
@@ -594,21 +563,15 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
       font-family: "Courier New", Courier;
       font-weight: 500;
       line-height: 23pt;
-      margin-top: 100px;
-      margin-left: -15px;
+      margin-top: 62px;
+      margin-left: 0px;
       }
-#container {
-    /* border: 1px solid #666; */
-    margin: 0 auto;
-    /* padding: 50px 100px 0px 100px; */
-    margin-bottom: 20px;
-    max-width: 500px;
-    margin-left: -3em;
-    margin-right: 0em;
-    }
 }
-@media only screen and (min-width: 480px) {
-
+@media only screen and (max-width: 540px) {
+  nav .site-navigation {
+  margin-left: 50px;
+  margin-top: 0px;
+  }
     }
 
 @media only screen and (max-width: 320px) {
