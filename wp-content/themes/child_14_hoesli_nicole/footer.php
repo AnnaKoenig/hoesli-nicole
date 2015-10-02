@@ -13,7 +13,6 @@
 		</div><!-- #main -->
 
 		
-
 			<?php get_sidebar( 'footer' ); ?>
 
 			<div class="site-info">
@@ -24,13 +23,18 @@
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>
+	
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src = "<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script src = "<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
+    
+
+    
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="<?php bloginfo('child_14_hoesli_nicole_directory'); ?>/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

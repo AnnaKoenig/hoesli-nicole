@@ -8,9 +8,12 @@
  */
 
 get_header(); ?>
-
+<div class="row">
+			        <div class="col-md-1"></div>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
+
+			        <div class="col-md-10">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
@@ -26,15 +29,14 @@ get_header(); ?>
 					twentyfourteen_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
+
 				endwhile;
 			?>
+			
+					        <div class="col-md-1"></div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+
 get_footer();
