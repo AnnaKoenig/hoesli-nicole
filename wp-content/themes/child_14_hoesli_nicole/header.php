@@ -63,7 +63,9 @@
 
       <div class="header-main">
 		<div class="navbar-header">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="index-pic" src ="../wp-includes/images/media/schrift_printclearly.jpg">
+				<!-- <?php bloginfo( 'name' ); ?> -->
+			</a></h1>
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav>

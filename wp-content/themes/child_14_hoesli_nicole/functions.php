@@ -41,6 +41,9 @@ function load_javascript() {
 
 }*/#
 
+/* Größe vergeben (Thumb) */
+add_image_size('post-secondary-image-thumbnail', 250, 180);
+add_image_size('page-secondary-image-thumbnail', 250, 180);
 
 if (class_exists('MultiPostThumbnails')) {
     new MultiPostThumbnails(
@@ -57,7 +60,6 @@ if (class_exists('MultiPostThumbnails')) {
             'label' => 'index-bild-2',
             'id' => 'third-thumbnail',
             'post_type' => 'post',
-						'post_type' => 'page'
         )
     );
 }
@@ -66,6 +68,7 @@ if (class_exists('MultiPostThumbnails')) {
         array(
             'label' => 'cv-bild',
             'id' => 'cv-thumbnail',
+            'name' => __( 'cv' ),
             'post_type' => 'page',
         )
     );

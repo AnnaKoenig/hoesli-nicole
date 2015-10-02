@@ -49,10 +49,11 @@ get_header(); ?>
 			                // define attributes for image display
 			                $imgattr = array(
 			                    'alt'   => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ),
-													'orderby' => 'date'
-			                ); ?>
+													'orderby' => 'date',
+												); ?>
 
-			                <a href ="<?php echo get_attachment_link(); ?>">
+			                <a href ="<?php echo get_attachment_link();
+											?>">
 
 												<?php if (class_exists('MultiPostThumbnails')) :
 												    MultiPostThumbnails::the_post_thumbnail(
@@ -60,31 +61,24 @@ get_header(); ?>
 												        'secondary-thumbnail'
 												    );
 
-														endif; ?>
-
-														<?php if (class_exists('MultiPostThumbnails')) :
-														    MultiPostThumbnails::the_post_thumbnail(
-														        get_post_type(),
-														        'third-thumbnail'
-														    );
-
-														endif; ?>
-
-													<?php if (class_exists('MultiPostThumbnails')
-													&& MultiPostThumbnails::has_post_thumbnail('page', 'secondary-image')) :
-                    					echo 'This condition is met';
-                    			MultiPostThumbnails::the_post_thumbnail('page', 'cv-thumbnail'); endif;?>
+													endif;?><span><?php the_title( $before ); ?></span>
 
 
-								<?php echo wp_get_attachment_image( $post->ID, $imgattr, $page->ID ); ?>
 
-							<?php endwhile; ?></div></a>
+							<?php endwhile; ?>
 
-	<!-- <?php else : echo 'empty';
-			// If no content, include the "No posts found" template.
-			get_template_part( 'content', 'none' );
+
+							<a href="http://localhost:8888/?p=10"><?php echo wp_get_attachment_image( 231,  $attachment->ID, 'full' );?><span>CV</span></a>
+							<a href="http://localhost:8888/?p=8"><?php echo wp_get_attachment_image( 409,  $attachment->ID, 'full' ); ?><span>CONTACT</span></a>
+
+
+						</div></a>
+
+<?php
+	else :
+	echo ('Sorry, no posts were found' );
 	endif;
-?> -->
+?>
 		</div>
  </div>
 </div><!-- end col -->

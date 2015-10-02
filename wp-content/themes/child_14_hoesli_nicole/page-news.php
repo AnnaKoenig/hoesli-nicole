@@ -38,6 +38,7 @@ get_header(); ?>
 
 								<span class="date-news"><?php the_field('number'); ?></span></div>
 								<div class="subline-news"><?php the_field('small'); ?></div>
+								<div class="subline-news"><a target="_blank" href="<?php the_field('pdf'); ?>"><?php the_field('pdf-text'); ?></a></div>
 
 								<div class="news-text">
 									<?php if( get_field('fett_2') ): ?>

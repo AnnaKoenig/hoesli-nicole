@@ -34,6 +34,10 @@ img {
 	max-width:100%;
 	height: 100%;
 }
+.index-pic {
+  margin-top: -10px;
+  cursor: pointer;
+}
 .col-md-12-nomargin img {
   max-width:100%;
   height: 100%;
@@ -132,7 +136,7 @@ span.date {
 	float: left;
 	display: inline-block;
 	margin-left: 2em;
-	margin-top: 710px;
+	margin-top: 720px;
 }
 .contact-content {
   margin-left: 140px;
@@ -183,10 +187,28 @@ span.date-news {
   font-size: 0.9em;
   margin-left: 3em;
 }
+.bildbeschr p:last-child {
+  font-size: 0.9em;
+  margin-right: 22em;
+  float: right;
+}
 .bildbeschr img{
   max-width: 60%;
   margin-left: 10em;
   margin-top: 50px;
+}
+/*===================== Title on Index
+*/
+.grid-item a span {
+    margin-top: 28px;
+    margin-left: -162px;
+    font-size: 12px;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    z-index: -999;
+    color: #000;
 }
 /*====================================================================== iso-grid
 */
@@ -209,8 +231,9 @@ span.date-news {
   text-align: center;
   left: 0;
   right: 0;
-  margin-left: 1em;
+  margin-left: 2em;
   margin-right: -1em;
+  margin-bottom: 40px;
 }
 .grid:after {
   content: '';
@@ -225,16 +248,16 @@ span.date-news {
     /* background: #fff; */
     padding: 20px 0px 0px 20px;
     position: relative;
-    /* align-items: baseline; */
-    /* alignment-baseline: baseline; */
-    vertical-align: text-top;
+    vertical-align: text-top;  -webkit-box-transition:all 1s ease-in-out;
+      -moz-box-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
 }
 .grid-item img:hover {
-  opacity: 0.8;
-  -webkit-box-transition:all 0.5s ease-in-out;
-  -moz-box-transition: all 0.5 ease-in-out;
-  transition: all 0.5 ease-in-out;
-  /* border: 1px solid black; */
+  opacity: 0.2;
+  -webkit-box-transition:all 1s ease-in-out;
+  -moz-box-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+   /*border: 1px solid black; */
   border-width: 0,25px;
   padding: -20px 20px 0px 0px;
 }
@@ -526,7 +549,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 	/* margin: 0px 0px 0px 0px; */
 	}
   nav .site-navigation {
-  margin-left: 30px;
+  margin-left: 5px;
   margin-top: 50px;
   }
   .image-title {
@@ -538,7 +561,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 }
 .grid-item img {
     /* float: left; */
-    max-width: 70%;
+    max-width: 100%;
     height: 100%;
     /* background: #fff; */
     padding: 20px 10px 10px 10px;
@@ -554,7 +577,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 	float: left;
 	font-size: 1em;
 	margin-right:50px;
-	margin-left: -30px;
+	margin-left: -20px;
 	/* margin: 0px 0px 0px 0px; */
 	}
   .menu-works-container {
@@ -569,7 +592,7 @@ aside#search-2, header.archive-header, a.post-edit-link, #recent-comments-2, #ar
 }
 @media only screen and (max-width: 540px) {
   nav .site-navigation {
-  margin-left: 50px;
+  margin-left: 40px;
   margin-top: 0px;
   }
     }
